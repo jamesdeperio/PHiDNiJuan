@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      function initialize() {
+        var options = {
+          sky: true,
+          atmosphere: true,
+          dragging: true,
+          tilting: true,
+          zooming: true,
+          center: [46.8011, 8.2266],
+            minZoom: 0,
+          maxZoom: 16,
+        };
+        earth = new WE.map('earth_div', options);
+        var natural = WE.tileLayer('http://data.webglearth.com/natural-earth-color/{z}/{x}/{y}.jpg', {
+          tileSize: 256,
+          tms: true
+        });
+        natural.addTo(earth);
+
+        var toner = WE.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+          attribution: '',
+          opacity: 0.3
+        });
+        toner.addTo(earth);
+          var marker = WE.marker([51.5, -0.09]).addTo(earth);
+
+
+        var marker2 = WE.marker([30.058056, 31.228889]).addTo(earth);
+
+
+      }
+    </script>
+    <style>
+      html, body{padding: 0; margin: 0;}
+      #earth_div{top: 0; right: 0; bottom: 0; left: 0;
+                 background-color: #000; position: absolute !important;}
+      </style>
+</head>
+<body onload="initialize()">
+<div id="earth_div"></div>
+</body>
+</html>

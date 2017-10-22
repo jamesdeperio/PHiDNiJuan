@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.rey.material.widget.Button
+        android:id="@+id/btnFace"
+        style="@style/Material.Drawable.Ripple.Wave"
+        app:rd_enable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Face Recognition"
+        />
+    <com.rey.material.widget.Button
+        android:id="@+id/btnQRCode"
+        style="@style/Material.Drawable.Ripple.Wave"
+        app:rd_enable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="QRCODE"
+        />
+</LinearLayout>

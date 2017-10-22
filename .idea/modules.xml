@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IDniJuan.iml" filepath="$PROJECT_DIR$/IDniJuan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KairosSDK/KairosSDK.iml" filepath="$PROJECT_DIR$/KairosSDK/KairosSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KairosSDK/KairosSDK.iml" filepath="$PROJECT_DIR$/KairosSDK/KairosSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/id-ni-juan.iml" filepath="$PROJECT_DIR$/id-ni-juan.iml" />
+    </modules>
+  </component>
+</project>

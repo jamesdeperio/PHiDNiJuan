@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/space_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/iconnijuan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Ni Juan"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/spaceNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:active_item_color="@color/colorPrimaryDark"
+        app:centre_button_color="@android:color/holo_red_dark"
+        app:centre_button_icon="@drawable/ic_fullscreen_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:space_background_color="@color/space_white" />
+
+    <FrameLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/spaceNavigationView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

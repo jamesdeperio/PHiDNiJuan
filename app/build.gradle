@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
+
+apply plugin: 'kotlin-android'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "pocketcoder.idnijuan"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a'
+            universalApk true
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    greendao {
+        schemaVersion 1
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    provided 'org.projectlombok:lombok:1.16.18'
+    annotationProcessor 'org.projectlombok:lombok:1.16.18'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.11"
+    compile 'com.google.dagger:dagger:2.11'
+    compile 'com.google.dagger:dagger-android:2.11'
+    compile 'com.google.dagger:dagger-android-support:2.11'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:support-annotations:26.0.0-alpha1'
+    compile 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.github.armcha:SpaceNavigationView:1.6.0'
+    compile 'com.github.jamesdeperio:codepocket:404fd337aa'
+    compile 'me.dm7.barcodescanner:zxing:1.9.8'
+    compile 'com.github.smart-fun:XmlToJson:1.4.0'
+    compile 'org.greenrobot:greendao:3.2.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.rey5137:material:1.2.4'
+    compile 'me.ithebk:barchart:0.9'
+    // compile project(':crosswalkwebview23535894arm64')
+    compile project(':KairosSDK')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+}
